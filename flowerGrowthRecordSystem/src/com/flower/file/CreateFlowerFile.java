@@ -18,6 +18,7 @@ public class CreateFlowerFile {
            File  file = new File(path,new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss").format(new Date()));
            if(!file.exists()){
                file.mkdirs();
+               file.getName();
            }
        }
        public static void main(String[] args) {
