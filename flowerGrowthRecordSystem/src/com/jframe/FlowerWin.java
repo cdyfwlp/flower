@@ -1,7 +1,12 @@
 package com.jframe;
 
+import com.flower.file.CreateFlowerFile;
+
 import javax.swing.*;
+import javax.swing.event.AncestorListener;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 /**
@@ -19,9 +24,17 @@ public class FlowerWin{
           text.setColumns(10);
           text.setBounds(150,100,300,30);
           jf.add(text);
+          JButton button1=new JButton("创建当前时间文件");
+          button1.setBounds(150,150,150,30);
+          button1.addActionListener(new ActionListener() {
+              @Override
+              public void actionPerformed(ActionEvent e) {
+                   CreateFlowerFile createFlowerFile=new CreateFlowerFile();
+                   createFlowerFile.createFolder();
+              }
+          });
+          jf.add(button1);
           jf.add(new JButton("创建文件"))
-                  .setBounds(150,150,150,30);
-          jf.add(new JButton("创建当前时间文件"))
                   .setBounds(300,150,150,30);
           //大小
           jf.setBounds(660,350,600,400);

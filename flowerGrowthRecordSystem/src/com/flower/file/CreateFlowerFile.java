@@ -15,10 +15,9 @@ public class CreateFlowerFile {
        String path="C:\\Users\\Asus\\Desktop\\技术\\工作学习（新）\\维护发布\\樱花树成长记录";
        //创建树成长照片文件夹
        public  void  createFolder(){
-           File  file = new File(path,new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss").format(new Date()));
+           File  file = new File(path,new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
            if(!file.exists()){
                file.mkdirs();
-
            }
        }
 }
