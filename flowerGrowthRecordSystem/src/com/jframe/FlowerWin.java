@@ -25,10 +25,10 @@ public class FlowerWin{
                   .setBounds(300,150,150,30);
           //大小
           jf.setBounds(660,350,600,400);
-          //可见
+          //布局
           jf.setLayout(null);
+          //可见
           jf.setVisible(true);
-
       }
       public static void main(String[] args) {
           FlowerWin flowerWin=new FlowerWin();
